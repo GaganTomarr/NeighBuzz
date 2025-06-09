@@ -1,0 +1,5 @@
+package com.infy.lcp.entity;
+
+public enum ForumCategory {
+	GENERAL, EDUCATIONAL, TECHNOLOGY, ENTERTAINMENT, LIFESTYLE, NEWS, HELP_AND_SUPPORT, FAITH, ENVIRONMENT
+}
