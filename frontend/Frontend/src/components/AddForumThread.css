@@ -1,0 +1,315 @@
+/* Add Forum Thread - Matching AddNews Style */
+.add-thread-background {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 50%, #dadce0 100%);
+  padding: 40px 20px;
+}
+
+.add-thread-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(209,213,219,0.3) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(156,163,175,0.2) 0%, transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.add-thread-container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 8vh;
+}
+
+.add-thread-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  border-radius: 24px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.1);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(229,231,235,0.6);
+}
+
+.add-thread-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d1d5db 0%, #9ca3af 50%, #6b7280 100%);
+  z-index: 1;
+}
+
+.add-thread-header {
+  padding: 40px 40px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-bottom: 1px solid rgba(229,231,235,0.6);
+}
+
+.add-thread-header h1 {
+  font-size: 2.2rem;
+  color: #1f2937;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.add-thread-header h1 i {
+  color: #6b7280;
+  font-size: 2rem;
+}
+
+.add-thread-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.add-thread-form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-control {
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+input.form-control {
+  height: 56px;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+input[type="file"].form-control {
+  padding: 14px 16px;
+  height: auto;
+  cursor: pointer;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #6b7280;
+  box-shadow: 0 0 0 3px rgba(107,114,128,0.1);
+  background: #ffffff;
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+/* Image Preview Styling */
+.image-preview {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border: 3px solid #ffffff;
+  max-width: 100%;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.remove-image-btn:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: scale(1.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  min-width: 160px;
+  justify-content: center;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: white;
+  box-shadow: 0 6px 20px rgba(107,114,128,0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+  box-shadow: 0 12px 32px rgba(107,114,128,0.4);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  color: #374151;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #d1d5db 0%, #9ca3af 100%);
+  color: #1f2937;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.error-message, .success-message {
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 0 0 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  color: #dc2626;
+  border: 2px solid #fecaca;
+}
+
+.success-message {
+  background: linear-gradient(135deg, #e6ffed 0%, #c7f5d9 100%);
+  color: #28a745;
+  border: 2px solid #a5e7b1;
+}
+
+@media (max-width: 768px) {
+  .add-thread-background {
+    padding: 20px 15px;
+  }
+  .add-thread-container {
+    margin-top: 5vh;
+  }
+  .add-thread-card {
+    border-radius: 20px;
+  }
+  .add-thread-header {
+    padding: 30px 25px 25px;
+  }
+  .add-thread-header h1 {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .add-thread-form {
+    padding: 30px 25px;
+    gap: 25px;
+  }
+  .form-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .btn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-thread-header h1 {
+    font-size: 1.6rem;
+  }
+  .add-thread-form {
+    padding: 25px 20px;
+    gap: 20px;
+  }
+  .form-control {
+    padding: 14px 16px;
+  }
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}

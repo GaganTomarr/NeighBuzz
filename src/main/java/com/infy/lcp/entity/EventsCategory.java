@@ -1,5 +1,0 @@
-package com.infy.lcp.entity;
-
-public enum EventsCategory {
-	SEMINAR, BOOKMEET, HEALTHCAMP, NETWORKING, FESTIVAL, ENTERTAINMENT, WORKSHOPS, EDUCATIONAL, RECREATIONAL
-}
